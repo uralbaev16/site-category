@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    background: #ddd;
+    height: 100vh;
+}
+
+.wrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 50px;
+}
+
+.card {
+    padding: 12px;
+    height: 500px;
+}
+
+.card__image {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #121212;
+    border-radius: 25px 25px 0 0;
+    text-align: center;
+}
+
+.card__image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 5px solid transparent;
+    outline: 3px solid #20e2d7;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+    background-color: #f1b88f;
+    border-radius: 25px;
+    text-align: center;
+    padding: 10px;
+    height: 100%;
+}
+h2{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.post__body{
+    overflow: auto;
+    font-size: 15px;
+}
+.post__body::-webkit-scrollbar{
+    width: 0;
+}
+
+p {
+    font-weight: 600;
+}
+
+.post__btn {
+    width: 280px;
+    padding: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #f8fff8;
+    font-size: 20px;
+    margin: 18px 0;
+}
+
+button:hover {
+    cursor: pointer;
+}
+.btn__wrapper{
+  margin-top: auto;
+}
+.loading {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0 50px;
+    grid-gap: 12px;
+    border-radius: 25px;
+
+}
+
+.loading__item {
+    padding: 12px;
+}
+
+.loading__image {
+    width: 98%;
+    height: 476px;
+    background: #ddd;
+    border-radius: 25px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.loading__title {
+    width: 280px;
+    height: 62px;
+    margin-top: 12px;
+    background: #6d5b5b;
+    margin-bottom: 25px;
+    padding: 20px;
+    border-radius: 30px;    
+}
+
+
+.to-left {
+    background: linear-gradient(90deg, #ddd, #aaa, #ddd);
+    background-size: 200%;
+    animation: toLeft 1s linear infinite;
+}
+.to-leftt {
+    background: linear-gradient(90deg, #6d5b5b, #aaa, #6d5b5b);
+    background-size: 200%;
+    animation: toLeft 1s linear infinite;
+}
+
+@keyframes toLeft {
+    to {
+        background-position: 200%;
+    }
+}
+
+.btn__seemore {
+    display: block;
+    margin: 40px auto;
+    padding: 10px;
+    background: dodgerblue;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn__seemore:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.btn__seemore:active {
+    transform: scale(0.95);
+}
+
+.btn__seemore:disabled:active {
+    transform: scale(1);
+}
